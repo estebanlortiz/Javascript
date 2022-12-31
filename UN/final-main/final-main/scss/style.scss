@@ -1,0 +1,414 @@
+@import "index";
+@import "navbar";
+@import "mixins";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: 'Crimson Text', serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:space-evenly;
+  align-items: center;
+  background-image: url(../img/green.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding: 50px;
+}
+
+.indice {
+  display: flex;
+  background-color: rgba(172, 255, 47, 0.611);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 2rem;
+  border: solid 1px black;
+  border-radius: 5px;
+  transition: 1.5s;
+}
+
+.indice:hover {
+  font-size: 30px;
+  font-style: bold;
+  color: red;
+  background-color: rgba(27, 112, 9, 0.473);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* SECCION  1 */
+
+.sec1-container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.sec1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  color: blue;
+  transition: all 1s ease-in-out;
+}
+
+.sec1texto {
+  align-self: flex-end;
+  text-align: left;
+  padding-left: 2px;
+}
+
+.sec1principal {
+  background-image: url(../img/gravel.jpg);
+}
+
+.sec1topright {
+  background-image: url(../img/alberto.jpg);
+}
+
+.sec1topleft {
+  background-image: url(../img/nino.jpg);
+}
+
+.sec1bottomleft {
+  background-image: url(../img/lance2.jpg);
+}
+
+.sec1bottomright {
+  background-image: url(../img/llueve.jpg);
+}
+
+.sec1:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black;
+  overflow: hidden;
+}
+
+.sec1 img {
+  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (min-width: 768px) {
+  .sec1-container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+  }
+}
+
+
+.sec1 a {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-size: 2rem;
+  transition: 2s;
+}
+
+.sec1 a:hover {
+  color: rgba(12, 237, 12, 0.43);
+  text-shadow: 2px 2px 4px black;
+  font-size: 2rem;
+}
+
+.sec1:first-child {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  justify-self: stretch;
+  align-items: stretch;
+}
+
+
+/* SECCION 2 */
+
+.sec2-container {
+  display: grid;
+  grid-template-rows: 150px 100px 150px 100px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.sec2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  color: black;
+  }
+
+.sec2textofoto {
+  align-self: flex-end;
+  text-align: left;
+  padding-left: 2px;
+}
+
+.sec2texto {
+  align-self: flex-start;
+  text-align: left;
+  padding-left: 2px;
+}
+
+.sec2izqarr {
+  background-image: url(../img/uci.jpg);
+  transition: all 1s ease-in-out;
+}
+
+.sec2derechoarr {
+  background-image: url(../img/ovalo1.jpg);
+  transition: all 1s ease-in-out;
+}
+
+
+.sec2izqarr:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black;
+  overflow: hidden;
+}
+
+.sec2derechoarr:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black;
+  overflow: hidden;
+}
+
+.sec2 img {
+  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sec2 a {
+  color: white;
+  text-shadow: 2px 2px 4px black;
+  font-size: 2rem;
+  transition: 2s;
+}
+
+.sec2 a:hover {
+  color: rgba(12, 237, 12, 0.43);
+  text-shadow: 2px 2px 4px black;
+  font-size: 2rem;
+}
+
+.texto2 {
+  color: rgb(7, 7, 7);
+  font-size: 1rem;
+  padding-top: 3rem;
+  }
+
+
+@media (min-width: 768px) {
+  .sec2-container {
+    display: grid;
+    grid-template-rows: 230px 230px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+
+    .texto2{
+  font-size: 1.5rem;
+  padding-top: 1rem;
+}
+}
+}
+
+
+/* SECCION 3 */
+
+.sec3-container {
+  display: grid;
+  grid-template-rows: 100px 100px 100px 100px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.sec3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  color: black;
+}
+
+.sec3textofoto {
+  align-self: flex-end;
+  text-align: left;
+  padding-left: 2px;
+}
+
+.sec3texto {
+  align-self: flex-start;
+  text-align: left;
+  padding-left: 2px;
+}
+
+.sec3izqarr {
+  background-image: url(../img/femaletour.jpg);
+  transition: all 1s ease-in-out;
+}
+
+.sec3derechoarr {
+  background-image: url(../img/trial.jpg);
+  transition: all 1s ease-in-out;
+}
+
+
+.sec3izqaba{
+  background-image: url(../img/lance.jpg);
+  transition: all 1s ease-in-out;
+}
+
+.sec3derechoaba{
+  background-image: url(../img/time.jpg);
+  transition: all 1s ease-in-out;
+}
+
+.sec3izqarr:hover {
+  transform: scale(1.1);
+  box-shadow: 13px 15px 37px black;
+  overflow: hidden;
+}
+
+.sec3derechoarr:hover {
+transform: scale(1.1);
+box-shadow: 13px 15px 37px black;
+overflow: hidden;
+}
+
+.sec3izqaba:hover {
+transform: scale(1.1);
+box-shadow: 13px 15px 37px black;
+overflow: hidden;
+}
+
+.sec3derechoaba:hover {
+transform: scale(1.1);
+box-shadow: 13px 15px 37px black;
+overflow: hidden;
+}
+
+.sec3 img {
+  border: 2px solid #000;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sec3 a {
+  color: rgb(8, 8, 8);
+  /* text-shadow: 2px 2px 4px black; */
+  font-size: 2rem;
+  transition: 2s;
+}
+
+.sec3 a:hover {
+  color: rgba(12, 237, 12, 0.43);
+  text-shadow: 2px 2px 4px black;
+  font-size: 2rem;
+}
+
+.texto3 {
+  color: rgb(7, 7, 7);
+  font-size: 1rem;
+  padding-top: 5rem;
+  }
+
+
+@media (min-width: 768px) {
+  .sec3-container {
+    display: grid;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    padding: 10px;
+
+    .texto3{
+  font-size: 1.4rem;
+  padding-top: 1rem;
+}
+}
+}
+
+
+
+/* FOOTER */
+
+
+
+.footer {
+  display: flex;
+  background-color: black;
+  color: aliceblue;
+  font-size: 30px;
+  border-top: #ffffff double;
+  border-width: 9px;
+  border-bottom: #ffffff double;
+  justify-content: center;
+  text-align: center;
+  @include flexCenter
+ /*  padding: 1rem;
+  margin: 1rem; */
+}
+
+
+/* <!-- NOTA 1 --> */
+
+.nota{
+display: flex;
+flex-direction: column;
+padding: 2rem;
+align-content: flex-start;
+padding-left: 2rem;
+padding-right: 2rem;
+
+}
+
+
+
+.notavid{
+display: flex;
+/* justify-content: center; */
+/* flex: 1; */
+/* flex-grow: 1; */
+margin: auto;
+/* flex-basis: 5vh 10vh; */
+/* max-width: 100px; */
+/* flex-grow: 1; */
+height: 50%;
+width: 50%;
+}
+
+
+

@@ -1,6 +1,8 @@
 import { actualizarTotalesCarrito } from './actualizarCarrito.js';
 import { productos } from './stock.js';
 import { obtenerCarritoStorage } from './storage.js';
+import { mostrarProductos } from './App.js';
+import { guardarCarritoStorage } from './storage.js';
 
 let carrito = [];
 
@@ -70,5 +72,30 @@ const eliminarProductoCarrito = (productoId) => {
     actualizarTotalesCarrito(carritoActualizado);
     pintarCarrito(carritoActualizado);
 };
+
+
+
+// Borrar todas las compras
+
+const vaciarCarrito = document.querySelector('#btn-del');
+
+vaciarCarrito.addEventListener('click', () => {
+    if(carrito.length === 0){
+        Swal.fire(
+            'Error',
+            'El carrito esta vacio',
+            'error'
+        )
+    }else{
+        const act = carrito.length = []
+        actualizarTotalesCarrito(act);
+        pintarCarrito(act);
+        Swal.fire(
+            'Eliminado',
+            'El carrito ha sido eliminado',
+            'success'
+        )
+    }
+})
 
 export { agregarAlCarrito, validarProductoRepetido, pintarCarrito, eliminarProductoCarrito };

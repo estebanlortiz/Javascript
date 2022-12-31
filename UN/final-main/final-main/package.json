@@ -1,0 +1,20 @@
+{
+  "name": "mi-repo",
+  "version": "1.0.0",
+  "description": "... while I was learning....\r Este repositorio corresponde  a las entregas de desafios de CODERHOUSE...!!!!!!",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch scss/style.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/novacuri/primer-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/novacuri/primer-repo/issues"
+  },
+  "homepage": "https://github.com/novacuri/primer-repo#readme"
+}
